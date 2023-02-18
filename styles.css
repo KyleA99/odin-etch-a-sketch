@@ -1,3 +1,4 @@
-.grid-container {
-    border: solid blue;
+#grid-container {
+    border: solid red;
+    height: 50px;
 }
