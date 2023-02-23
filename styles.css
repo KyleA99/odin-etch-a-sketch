@@ -1,5 +1,9 @@
 #grid-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25%;
     border: solid red;
     height: 500px;
 }
+
+/* .divSquaresContent { */
+/* } */
