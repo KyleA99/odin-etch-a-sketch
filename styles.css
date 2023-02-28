@@ -2,8 +2,11 @@
     display: grid;
     grid-template-columns: 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25%;
     border: solid red;
-    height: 500px;
 }
+
+addEventListener("mouseover", (event) => {});
+
+onmouseover = (event) => {};
 
 /* .divSquaresContent { */
 /* } */
