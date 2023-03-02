@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25% 6.25%;
     border: solid red;
-    height: 960px;
-    width: 960px;
-
+    height: 800px;
+    width: 800px;
 }
