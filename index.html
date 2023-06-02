@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
     <script src="script.js" defer></script>
+</head>
 
-    <div id="grid-size-selection">
-        <div id="buttons-div">
-            <button type="16x16">16x16 Grid</button>
-            <button type="64x64">64x64 Grid</button>
-            <button type="100x100">100x100 Grid</button>
-        </div>
+<body>
+    <div class="size-selection-buttons-container">
+        <button class="small-grid" type="button">16x16 Grid</button>
+        <button class="medium-grid" type="button">64x64 Grid</button>
+        <button class="large-grid" type="button">100x100 Grid</button>
     </div>
 
-    <div id="grid-container">
-    </div>
+    <div id="grid-container"></div>
 </body>
 </html>

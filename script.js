@@ -2,17 +2,16 @@ let gridContainer = document.querySelector("#grid-container");
 
 function createGrid() {
     for (let i = 0; i < 256; i++) {
-        let etchSquare = document.createElement("div");
-        etchSquare.classList.add("etchSquareContent");
+        let gridTile = document.createElement("div");
+        gridTile.classList.add("gridTileContent");
 
-        etchSquare.addEventListener(
+        gridTile.addEventListener(
             "mouseenter",
             (event) => {
                 event.target.style.backgroundColor = "blue";
             }
         )
-
-        gridContainer.appendChild(etchSquare);
+        gridContainer.appendChild(gridTile);
     }
 }
 createGrid();
