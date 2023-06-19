@@ -10,8 +10,7 @@ function createGrid() {
         let gridTile = document.createElement("div");
         // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
-
-        // Set the height of the gridTile div
+        // Set the height and width of the gridTile divs
         gridTile.style.height = "6.25%";
         gridTile.style.width = "6.25%";
 
@@ -26,3 +25,7 @@ function createGrid() {
     }
 }
 createGrid();
+
+function promptGridSize() {
+    let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.")
+}
