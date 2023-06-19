@@ -11,6 +11,10 @@ function createGrid() {
         // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
 
+        // Set the height of the gridTile div
+        gridTile.style.height = "6.25%";
+        gridTile.style.width = "6.25%";
+
         // An event listener is attached to gridTile that changes gridTile to be blue when the mouse enters each gridTile
         gridTile.addEventListener(
             "mouseenter",
