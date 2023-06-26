@@ -30,8 +30,7 @@ createGrid();
 
 function promptGridSize() {
     let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
-    // Converts gridSize value to a number
+    // Converts gridSize value from a string to a number
     gridSize = parseInt(gridSize);
-    createGrid(gridSize);
     console.log(gridSize);
 }
