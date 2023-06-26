@@ -1,3 +1,5 @@
+let gridSize = "";
+
 // Selects the element with the ID "grid-container" and assigns it to the variable gridContainer.
 let gridContainer = document.querySelector("#grid-container");
 
@@ -27,5 +29,9 @@ function createGrid() {
 createGrid();
 
 function promptGridSize() {
-    let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.")
+    let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
+    // Converts gridSize value to a number
+    gridSize = parseInt(gridSize);
+    createGrid(gridSize);
+    console.log(gridSize);
 }
