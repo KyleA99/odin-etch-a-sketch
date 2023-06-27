@@ -38,10 +38,10 @@ function promptGridSize() {
     // Calls createGrid() and passes gridSize as an argument
     createGrid(gridSize);
 
-    // Catches grid sizes that exceed maximum, 100x100 grid
+    // Throws an error when grid sizes exceed the maximum, 100x100 grid size
     try {
         if (gridSize > 100) throw "exceeds maximum grid size of 100x100"
     } catch(err) {
-      alert ("Specified grid size " + err);
+        alert ("Specified grid size " + err);
     }
 }
