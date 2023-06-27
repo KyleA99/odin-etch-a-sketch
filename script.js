@@ -33,6 +33,15 @@ function promptGridSize() {
     // Converts gridSize value from a string to a number
     gridSize = parseInt(gridSize);
 
+    console.log(gridSize);
+
     // Calls createGrid() and passes gridSize as an argument
     createGrid(gridSize);
+
+    // Catches grid sizes that exceed maximum, 100x100 grid
+    try {
+        if (gridSize > 100) throw "exceeds maximum grid size of 100x100"
+    } catch(err) {
+      alert ("Specified grid size " + err);
+    }
 }
