@@ -6,15 +6,15 @@ let gridContainer = document.querySelector("#grid-container");
 /**
  * Generates a grid of div elements
  */ 
-function createGrid() {
-    for (let i = 0; i < 256; i++) {
+function createGrid(gridSize) {
+    for (let i = 0; i < gridSize * gridSize; i++) {
         // Creates a div and assigns it to gridTile
         let gridTile = document.createElement("div");
         // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
         // Set the height and width of the gridTile divs
-        gridTile.style.height = "6.25%";
-        gridTile.style.width = "6.25%";
+        gridTile.style.height = (100 / gridSize) + "%";
+        gridTile.style.width = (100 / gridSize) + "%";
 
         // An event listener is attached to gridTile that changes gridTile to be blue when the mouse enters each gridTile
         gridTile.addEventListener(
@@ -32,5 +32,7 @@ function promptGridSize() {
     let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
     // Converts gridSize value from a string to a number
     gridSize = parseInt(gridSize);
-    console.log(gridSize);
+
+    // Calls createGrid() and passes gridSize as an argument
+    createGrid(gridSize);
 }
