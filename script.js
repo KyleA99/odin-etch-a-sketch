@@ -70,6 +70,9 @@ function componentToHex(c) {
 }
 
 function promptGridSize() {
+    // Clear the existing grid if a new prompt() result is inputted by user
+    clearGrid();
+
     let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
     // Converts gridSize value from a string to a number
     gridSize = parseInt(gridSize);
@@ -84,5 +87,14 @@ function promptGridSize() {
         if (gridSize > 100) throw "exceeds maximum grid size of 100x100"
     } catch(err) {
         alert ("Specified grid size " + err);
+    }
+}
+
+/**
+ * Clears the grid container by removing all child elements
+ */
+function clearGrid() {
+    while (gridContainer.firstChild) {
+      gridContainer.removeChild(gridContainer.firstChild);
     }
 }
