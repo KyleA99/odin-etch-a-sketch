@@ -28,3 +28,12 @@
     background-color: whitesmoke;
     z-index: 1;
 }
+
+.grid-size-button-container {
+    border: 1px solid blue;
+}
+
+.prompt-button {
+    display: grid;
+    margin: 0 auto;
+}
