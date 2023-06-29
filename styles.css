@@ -29,11 +29,27 @@
     z-index: 1;
 }
 
-.grid-size-button-container {
-    border: 1px solid blue;
-}
-
 .prompt-button {
     display: grid;
     margin: 0 auto;
+}
+
+.knobs-container {
+    position: relative;
+}
+
+.knob-left, .knob-right {
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: white;
+}
+
+.knob-left {
+    left: 2rem;
+}
+
+.knob-right {
+    right: 2rem;
 }
