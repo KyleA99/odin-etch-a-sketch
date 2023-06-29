@@ -2,6 +2,7 @@
     width: 50%;
     height: 100%;
     margin: auto;
+    padding-bottom: 4rem;
     /* place-content: center; */
     background-color: red;
     border: solid 2px red;
@@ -22,7 +23,7 @@
     height: 500px;
     /* height: 100%; */
     width: 80%;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
     border-radius: 1rem;
     background-color: whitesmoke;
     z-index: 1;
