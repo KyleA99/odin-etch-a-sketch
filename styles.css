@@ -34,10 +34,17 @@
     display: grid;
     margin: 1rem auto;
     font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     background-color: gold;
-    border-color: gold;
+    border: none;
     border-radius: 1rem;
+    transition-duration: 0.4s;
+    padding: 1rem;
 }
+
+.prompt-button:hover {
+    background-color: rgba(255, 217, 0, 0.8);
+  }
 
 .knobs-container {
     position: relative;
