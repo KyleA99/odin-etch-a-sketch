@@ -1,15 +1,29 @@
 .etch-container {
-    width: 100%;
+    width: 50%;
     height: 100%;
-    border: solid 2px blue;
+    margin: auto;
+    /* place-content: center; */
+    background-color: red;
+    border: solid 2px red;
+    border-radius: 1rem;
+}
+
+.etch-title {
+    font-family: Snell Roundhand, cursive, sans-serif;
+    color: gold;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #grid-container {
     display: flex;
     flex-wrap: wrap;
     border: solid 3px red;
-    height: 700px;
+    height: 500px;
     /* height: 100%; */
-    width: 50%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto 4rem;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    z-index: 1;
 }
