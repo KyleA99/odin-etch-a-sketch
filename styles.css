@@ -1,6 +1,7 @@
 .etch-container {
     width: 50%;
     height: 100%;
+    /* doesnt work because it isnt nested in a div that occupies full height of viewport? */
     margin: auto;
     padding-bottom: 4rem;
     /* place-content: center; */
@@ -31,7 +32,11 @@
 
 .prompt-button {
     display: grid;
-    margin: 0 auto;
+    margin: 1rem auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: gold;
+    border-color: gold;
+    border-radius: 1rem;
 }
 
 .knobs-container {
@@ -43,7 +48,7 @@
     clip-path: circle(50% at 50% 50%);
     height: 3.5rem;
     width: 3.5rem;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .knob-left {
