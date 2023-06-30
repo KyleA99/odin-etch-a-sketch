@@ -13,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: lightgray;
 }
 
 main {
@@ -119,4 +120,10 @@ p, h1, h2, h3, h4, h5, h6 {
 .github-logo {
     height: 1.5rem;
     width: 1.5rem;
+}
+
+@media (360px <= width <= 1200px) {
+    .etch-container {
+        width: 80%;
+    }
 }
