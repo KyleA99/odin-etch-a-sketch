@@ -11,7 +11,7 @@
 }
 
 .etch-title {
-    font-family: Snell Roundhand, cursive, sans-serif;
+    font-family: "Snell Roundhand", "cursive", sans-serif;
     color: gold;
     font-size: 2rem;
     text-align: center;
@@ -22,7 +22,6 @@
     flex-wrap: wrap;
     border: solid 3px red;
     height: 500px;
-    /* height: 100%; */
     width: 80%;
     margin: 0 auto;
     border-radius: 1rem;
@@ -33,7 +32,7 @@
 .prompt-button {
     display: grid;
     margin: 1rem auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
     background-color: gold;
     border: none;
@@ -44,7 +43,7 @@
 
 .prompt-button:hover {
     background-color: rgba(255, 217, 0, 0.8);
-  }
+}
 
 .knobs-container {
     position: relative;
@@ -59,9 +58,28 @@
 }
 
 .knob-left {
-    left: 2rem;
+    left: 1rem;
 }
 
 .knob-right {
-    right: 2rem;
+    right: 1rem;
+}
+
+.footer-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.github-logo {
+    height: 1.5rem;
+    width: 1.5rem;
 }
