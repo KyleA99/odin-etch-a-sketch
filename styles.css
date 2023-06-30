@@ -1,10 +1,39 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
 .etch-container {
     width: 50%;
     height: 100%;
     /* doesnt work because it isnt nested in a div that occupies full height of viewport? */
     margin: auto;
     padding-bottom: 4rem;
-    /* place-content: center; */
     background-color: red;
     border: solid 2px red;
     border-radius: 1rem;
