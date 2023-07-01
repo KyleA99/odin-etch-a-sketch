@@ -22,8 +22,8 @@ function createGrid(gridSize) {
         gridTile.addEventListener("mouseenter", (event) => {
             // Increases (darkens) the color intensity by 10
             colorIntensity += 10;
-            // Calls the result of darkenColor() and assigns the darkened color of gray to a variable
-            let darkenedColor = darkenColor("gray", colorIntensity);
+            // Calls the result of darkenColor() and assigns the darkened RGB color of gray to a variable
+            let darkenedColor = darkenColor([128, 128, 128], colorIntensity);
             event.target.style.backgroundColor = darkenedColor;
         });
       
@@ -34,39 +34,19 @@ createGrid();
 
 /**
  * Darkens a given color by a specified intensity.
- * @param {string} color - The color to darken. Can be a hexadecimal color string or "gray"
+ * @param {string} color - The RGB color to darken. For gray, use [128, 128, 128]
  * @param {number} intensity - The percentage by which to darken the color (0-100)
- * @returns {string} - The darkened color in hexadecimal format
+ * @returns {string} - The darkened color
  */
 function darkenColor(color, intensity) {
-    let hexColor = color;
-    if (color === "gray") {
-      hexColor = "#808080";
-    }
-  
-    // Convert hex color to RGB values
-    let r = parseInt(hexColor.substring(1, 3), 16);
-    let g = parseInt(hexColor.substring(3, 5), 16);
-    let b = parseInt(hexColor.substring(5, 7), 16);
-  
     // Calculate the darker color
-    r = Math.max(r - Math.floor(r * intensity / 100), 0);
-    g = Math.max(g - Math.floor(g * intensity / 100), 0);
-    b = Math.max(b - Math.floor(b * intensity / 100), 0);
+    let r = Math.max(color[0] - Math.floor(color[0] * intensity / 100), 0);
+    let g = Math.max(color[1] - Math.floor(color[1] * intensity / 100), 0);
+    let b = Math.max(color[2] - Math.floor(color[2] * intensity / 100), 0);
   
-    // Convert RGB values back to hex color
-    let darkenedColor = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    // Convert RGB values to hex color (necessary for backgroundColor of gridTile styling in the event listener)
+    let darkenedColor = "#" + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
     return darkenedColor;
-}
-
-/**
- * Converts a decimal component value to its two-digit hexadecimal representation
- * @param {number} c - The decimal component value (0-255)
- * @returns {string} - The two-digit hexadecimal representation of the component
- */
-function componentToHex(c) {
-    let hex = c.toString(16);
-    return hex.length === 1 ? "0" + hex : hex;
 }
 
 function promptGridSize() {
