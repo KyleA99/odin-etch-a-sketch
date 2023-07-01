@@ -73,11 +73,9 @@ function promptGridSize() {
     // Clear the existing grid if a new prompt() result is inputted by user
     clearGrid();
 
-    let gridSize = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
+    let gridValue = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
     // Converts gridSize value from a string to a number
-    gridSize = parseInt(gridSize);
-
-    console.log(gridSize);
+    gridSize = parseInt(gridValue);
 
     // Calls createGrid() and passes gridSize as an argument
     createGrid(gridSize);
