@@ -33,6 +33,7 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+/* stylelint-disable-next-line */
 #root, #__next {
     isolation: isolate;
 }
@@ -40,7 +41,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .etch-container {
     width: 50%;
     height: 100%;
-    /* doesnt work because it isnt nested in a div that occupies full height of viewport? */
     margin: auto;
     padding-bottom: 4rem;
     background-color: red;
@@ -49,7 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .etch-title {
-    font-family: "Snell Roundhand", "cursive", sans-serif;
+    font-family: "Snell Roundhand", cursive, sans-serif;
     color: gold;
     font-size: 3rem;
     text-align: center;
@@ -70,7 +70,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .prompt-button {
     display: grid;
     margin: 1rem auto;
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 1rem;
     background-color: gold;
     border: none;
@@ -80,7 +80,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .prompt-button:hover {
-    background-color: rgba(255, 217, 0, 0.8);
+    background-color: rgba(255 217 0 80%);
 }
 
 .knobs-container {
@@ -114,7 +114,7 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .github-logo {
