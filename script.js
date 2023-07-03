@@ -6,15 +6,15 @@ let gridContainer = document.querySelector("#grid-container");
 /**
  * Generates a grid of div elements
  */ 
-function createGrid(gridSize) {
+const createGrid = (gridSize) => {
     for (let i = 0; i < gridSize * gridSize; i++) {
         // Creates a div and assigns it to gridTile
-        let gridTile = document.createElement("div");
+        const gridTile = document.createElement("div");
         // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
         // Set the height and width of the gridTile divs
-        gridTile.style.height = (100 / gridSize) + "%";
-        gridTile.style.width = (100 / gridSize) + "%";
+        gridTile.style.height = `${100 / gridSize}%`;
+        gridTile.style.width = `${100 / gridSize}%`;
 
         let colorIntensity = 0;
 
@@ -23,13 +23,13 @@ function createGrid(gridSize) {
             // Increases (darkens) the color intensity by 10
             colorIntensity += 10;
             // Calls the result of darkenColor() and assigns the darkened RGB color of gray to a variable
-            let darkenedColor = darkenColor([128, 128, 128], colorIntensity);
+            const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
             event.target.style.backgroundColor = darkenedColor;
         });
       
         gridContainer.appendChild(gridTile);
     }
-}
+};
 createGrid();
 
 /**
@@ -38,41 +38,41 @@ createGrid();
  * @param {number} intensity - The percentage by which to darken the color (0-100)
  * @returns {string} - The darkened color
  */
-function darkenColor(color, intensity) {
+const darkenColor = (color, intensity) => {
     // Calculate the darker color
-    let r = Math.max(color[0] - Math.floor(color[0] * intensity / 100), 0);
-    let g = Math.max(color[1] - Math.floor(color[1] * intensity / 100), 0);
-    let b = Math.max(color[2] - Math.floor(color[2] * intensity / 100), 0);
+    const r = Math.max(color[0] - Math.floor(color[0] * intensity / 100), 0);
+    const g = Math.max(color[1] - Math.floor(color[1] * intensity / 100), 0);
+    const b = Math.max(color[2] - Math.floor(color[2] * intensity / 100), 0);
   
     // Convert RGB values to hex color (necessary for backgroundColor of gridTile styling in the event listener)
-    let darkenedColor = "#" + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
+    const darkenedColor = "#" + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
     return darkenedColor;
-}
+};
 
-function promptGridSize() {
+const promptGridSize = () => {
     // Clear the existing grid if a new prompt() result is inputted by user
     clearGrid();
 
-    let gridValue = prompt("Please specify the desired grid size.  E.g. 64 specifies a 64x64 grid.");
+    const gridValue = prompt("Please specify the desired grid size. E.g. 64 specifies a 64x64 grid.");
     // Converts gridSize value from a string to a number
-    gridSize = parseInt(gridValue);
+    const gridSize = parseInt(gridValue);
 
     // Calls createGrid() and passes gridSize as an argument
     createGrid(gridSize);
 
     // Throws an error when grid sizes exceed the maximum, 100x100 grid size
     try {
-        if (gridSize > 100) throw "exceeds maximum grid size of 100x100"
+        if (gridSize > 100) throw new Error("exceeds maximum grid size of 100x100");
     } catch(err) {
-        alert ("Specified grid size " + err);
+        alert("Specified grid size " + err);
     }
-}
+};
 
 /**
  * Clears the grid container by removing all child elements
  */
-function clearGrid() {
+const clearGrid = () => {
     while (gridContainer.firstChild) {
-      gridContainer.removeChild(gridContainer.firstChild);
+        gridContainer.removeChild(gridContainer.firstChild);
     }
-}
+};
