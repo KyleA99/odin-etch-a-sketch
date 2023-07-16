@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .prompt-button:hover, .clear-button:hover {
     cursor: pointer;
-    background-color: rgba(239, 204, 3, 0.8);
+    background-color: rgba(239 204 3 / 80%);
 }
 
 .knobs-container {
