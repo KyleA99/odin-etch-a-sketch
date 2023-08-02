@@ -1,3 +1,11 @@
+:root {
+    --clr-primary: red;
+    --clr-secondary: gold;
+    --clr-tertiary: rgba(239 204 3 / 80%);
+    --clr-neutral: lightgray;
+    --clr-accent: whitesmoke;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -13,7 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 95px);
-    background-color: lightgray;
+    background-color: var(--clr-neutral);
 }
 
 main {
@@ -43,14 +51,14 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 100%;
     margin: auto;
     padding-bottom: 4rem;
-    background-color: red;
-    border: solid 2px red;
+    background-color: var(--clr-primary);
+    border: solid 2px var(--clr-primary);
     border-radius: 1rem;
 }
 
 .etch-title {
     font-family: "Snell Roundhand", cursive, sans-serif;
-    color: gold;
+    color: var(--clr-secondary);
     font-size: 3rem;
     text-align: center;
 }
@@ -58,12 +66,12 @@ p, h1, h2, h3, h4, h5, h6 {
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    border: solid 3px red;
+    border: solid 3px var(--clr-primary);
     height: 500px;
     width: 80%;
     margin: 0 auto;
     border-radius: 1rem;
-    background-color: whitesmoke;
+    background-color: var(--clr-accent);
     z-index: 1;
 }
 
@@ -76,7 +84,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 1rem auto;
     font-family: Roboto, sans-serif;
     font-size: 1rem;
-    background-color: gold;
+    background-color: var(--clr-secondary);
     border: none;
     border-radius: 1rem;
     transition-duration: 0.4s;
@@ -85,7 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .prompt-button:hover, .clear-button:hover {
     cursor: pointer;
-    background-color: rgba(239 204 3 / 80%);
+    background-color: var(--clr-tertiary);
 }
 
 .knobs-container {
@@ -97,7 +105,7 @@ p, h1, h2, h3, h4, h5, h6 {
     clip-path: circle(50% at 50% 50%);
     height: 3.5rem;
     width: 3.5rem;
-    background-color: whitesmoke;
+    background-color: var(--clr-accent);
 }
 
 .knob-left {
