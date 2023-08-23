@@ -4,8 +4,9 @@ let gridSize = "";
 let gridContainer = document.querySelector("#grid-container");
 
 /**
- * Generates a grid of div elements
- */ 
+ * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
+ * @param {number} gridSize - The size of the grid (number of rows and columns)
+ */
 const createGrid = (gridSize) => {
     for (let i = 0; i < gridSize * gridSize; i++) {
         // Creates a div and assigns it to gridTile
@@ -34,7 +35,7 @@ createGrid();
 
 /**
  * Darkens a given color by a specified intensity.
- * @param {string} color - The RGB color to darken. For gray, use [128, 128, 128]
+ * @param {number[]} color - The RGB color to darken. For gray, use [128, 128, 128]
  * @param {number} intensity - The percentage by which to darken the color (0-100)
  * @returns {string} - The darkened color
  */
@@ -49,6 +50,9 @@ const darkenColor = (color, intensity) => {
     return darkenedColor;
 };
 
+/**
+ * Prompts the user to specify the desired grid size and creates the grid accordingly.
+ */
 const promptGridSize = () => {
     // Clear the existing grid if a new prompt() result is inputted by user
     clearGrid();
