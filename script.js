@@ -1,7 +1,5 @@
-let gridSize = "";
-
-// Selects the element with the ID "grid-container" and assigns it to the variable gridContainer.
-let gridContainer = document.querySelector("#grid-container");
+const gridSize = "";
+const gridContainer = document.querySelector("#grid-container");
 
 /**
  * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
@@ -9,7 +7,6 @@ let gridContainer = document.querySelector("#grid-container");
  */
 const createGrid = (gridSize) => {
     for (let i = 0; i < gridSize * gridSize; i++) {
-        // Creates a div and assigns it to gridTile
         const gridTile = document.createElement("div");
         // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
@@ -58,10 +55,8 @@ const promptGridSize = () => {
     clearGrid();
 
     const gridValue = prompt("Please specify the desired grid size. E.g. 64 specifies a 64x64 grid.");
-    // Converts gridSize value from a string to a number
     const gridSize = parseInt(gridValue);
 
-    // Throws an error when grid sizes exceed the maximum, 100x100 grid size
     try {
         if (gridSize > 100) throw new Error("exceeds maximum grid size of 100x100");
             // Calls createGrid() and passes gridSize as an argument
