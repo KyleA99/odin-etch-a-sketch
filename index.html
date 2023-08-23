@@ -14,19 +14,33 @@
 
 <body>
     <main>
-        <div class="etch-container">
-            <h1 class="etch-title">Etch A Sketch</h1>
-
-            <div id="grid-container"></div>
-
-            <div class="buttons-container">
-                <button onclick="promptGridSize()" class="prompt-button" type="button">Select grid size</button>
-                <button onclick="clearGrid()" class="clear-button" type="button">Clear screen</button>
+        <div class="grid-container">
+            <div class="instructions-container">
+                <div class="instructions-header">Instructions</div>
+                <ol>
+                    <li>Click the "Select grid size" button</br>
+                        and specify the desired grid size.</li>
+                    <li>Each time your mouse passes through</br>
+                        a square, the square's color will slightly darken.</li>
+                    <li>The "Clear screen" button can be</br>
+                        used to reset the screen.</li>
+                </ol>
             </div>
 
-            <div class="knobs-container">
-                <div class="knob-left"></div>
-                <div class="knob-right"></div>
+            <div class="etch-container">
+                <h1 class="etch-title">Etch A Sketch</h1>
+
+                <div id="grid-container"></div>
+
+                <div class="buttons-container">
+                    <button onclick="promptGridSize()" class="prompt-button" type="button">Select grid size</button>
+                    <button onclick="clearGrid()" class="clear-button" type="button">Clear screen</button>
+                </div>
+
+                <div class="knobs-container">
+                    <div class="knob-left"></div>
+                    <div class="knob-right"></div>
+                </div>
             </div>
         </div>
     </main>
