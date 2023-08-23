@@ -60,6 +60,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 2rem;
     padding: 1rem;
     margin: 1rem;
+    width: 70%;
 }
 
 .instructions-container ol {
@@ -72,9 +73,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .etch-container {
     width: 50%;
-    height: 100%;
-    margin: auto;
-    padding-bottom: 4rem;
+    margin: 2rem auto;
     background-color: var(--clr-primary);
     border: solid 2px var(--clr-primary);
     border-radius: 1rem;
@@ -130,6 +129,7 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 3.5rem;
     width: 3.5rem;
     background-color: var(--clr-accent);
+    margin-top: -4.25rem;
 }
 
 .knob-left {
