@@ -48,7 +48,6 @@ const darkenColor = (color, intensity) => {
 };
 
 const promptButton = document.getElementById("prompt-button");
-
 /**
  * Prompts the user to specify the desired grid size and creates the grid accordingly.
  */
@@ -70,7 +69,6 @@ const promptGridSize = () => {
 promptButton.addEventListener("click", promptGridSize);
 
 const clearButton = document.getElementById("clear-button");
-
 /**
  * Clears the grid container by removing all child elements
  */
@@ -79,4 +77,4 @@ const clearGrid = () => {
         gridContainer.removeChild(gridContainer.firstChild);
     }
 };
-clearButton.addEventListener('click', clearGrid);
+clearButton.addEventListener("click", clearGrid);
