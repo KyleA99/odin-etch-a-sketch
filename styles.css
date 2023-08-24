@@ -97,6 +97,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .buttons-container {
     display: flex;
+    padding: 0 1rem;
 }
 
 .prompt-button, .clear-button {
@@ -165,5 +166,9 @@ footer, .footer-container {
 @media (width <= 900px) {
     .instructions-container {
         width: 95%;
+    }
+
+    .buttons-container {
+        padding: 0 4rem;
     }
 }
