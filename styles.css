@@ -50,8 +50,8 @@ p, h1, h2, h3, h4, h5, h6 {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.grid-container {
-    display: flex;
+.content-container {
+    display: inline;
 }
 
 .instructions-container {
@@ -59,8 +59,8 @@ p, h1, h2, h3, h4, h5, h6 {
     border: solid 2px black;
     border-radius: 2rem;
     padding: 1rem;
-    margin: 1rem;
-    width: 70%;
+    margin: 2rem auto;
+    width: 60%;
 }
 
 .instructions-container ol {
@@ -161,6 +161,12 @@ footer, .footer-container {
 
 @media (360px <= width <= 1200px) {
     .etch-container {
+        width: 80%;
+    }
+}
+
+@media (360px <= width <= 850px) {
+    .instructions-container {
         width: 80%;
     }
 }
