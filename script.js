@@ -31,19 +31,24 @@ const createGrid = (gridSize) => {
 createGrid();
 
 /**
+ * Calculates a darkened version of the given RGB color based on the specified intensity.
+ * @param {number[]} color - The RGB color to darken.
+ * @param {number} intensity - The percentage by which to darken the color (0-100).
+ * @returns {number[]} - The darkened RGB color.
+ */
+const calculateDarkenedColor = (color, intensity) => {
+    return color.map(channel => Math.max(channel - Math.floor(channel * intensity / 100), 0));
+};
+
+/**
  * Darkens a given color by a specified intensity.
- * @param {number[]} color - The RGB color to darken. For gray, use [128, 128, 128]
- * @param {number - integer} intensity - The percentage by which to darken the color (0-100)
- * @returns {string} - The darkened color
+ * @param {number[]} color - The RGB color to darken.
+ * @param {number - integer} intensity - The percentage by which to darken the color (0-100).
+ * @returns {string} - The darkened color in hexadecimal format (#RRGGBB).
  */
 const darkenColor = (color, intensity) => {
-    // Calculate the darker color
-    const r = Math.max(color[0] - Math.floor(color[0] * intensity / 100), 0);
-    const g = Math.max(color[1] - Math.floor(color[1] * intensity / 100), 0);
-    const b = Math.max(color[2] - Math.floor(color[2] * intensity / 100), 0);
-  
-    // Convert RGB values to hex color (necessary for backgroundColor of gridTile styling in the event listener)
-    const darkenedColor = "#" + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
+    const [r, g, b] = calculateDarkenedColor(color, intensity);
+    const darkenedColor = `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
     return darkenedColor;
 };
 
