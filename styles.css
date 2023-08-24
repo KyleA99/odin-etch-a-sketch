@@ -86,7 +86,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-wrap: wrap;
     border: solid 3px var(--clr-primary);
-    height: 500px;
+    height: 25rem;
     width: 80%;
     margin: 0 auto;
     border-radius: 1rem;
