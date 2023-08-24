@@ -8,7 +8,6 @@ const gridContainer = document.querySelector("#grid-container");
 const createGrid = (gridSize) => {
     for (let i = 0; i < gridSize * gridSize; i++) {
         const gridTile = document.createElement("div");
-        // gridTile is given the class gridTileContent
         gridTile.classList.add("gridTileContent");
         // Set the height and width of the gridTile divs
         gridTile.style.height = `${100 / gridSize}%`;
@@ -18,7 +17,6 @@ const createGrid = (gridSize) => {
 
         // An event listener is attached to gridTile that changes gridTile to be gray when the mouse enters each gridTile
         gridTile.addEventListener("mouseenter", (event) => {
-            // Increases (darkens) the color intensity by 10
             colorIntensity += 10;
             // Calls the result of darkenColor() and assigns the darkened RGB color of gray to a variable
             const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
@@ -65,7 +63,6 @@ const promptGridSize = () => {
 
     try {
         if (gridSize > 100) throw new Error("exceeds maximum grid size of 100x100");
-            // Calls createGrid() and passes gridSize as an argument
             createGrid(gridSize);
     } catch(err) {
         alert("Specified grid size " + err);
