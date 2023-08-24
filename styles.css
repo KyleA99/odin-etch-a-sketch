@@ -100,7 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0 1rem;
 }
 
-.prompt-button, .clear-button {
+#prompt-button, #clear-button {
     display: grid;
     margin: 1rem auto;
     font-family: Roboto, sans-serif;
@@ -112,7 +112,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
 }
 
-.prompt-button:hover, .clear-button:hover {
+#prompt-button:hover, #clear-button:hover {
     cursor: pointer;
     background-color: var(--clr-tertiary);
 }
