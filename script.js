@@ -3,7 +3,7 @@ const gridContainer = document.querySelector("#grid-container");
 
 /**
  * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
- * @param {number} gridSize - The size of the grid (number of rows and columns)
+ * @param {number - integer} gridSize - The size of the grid (number of rows and columns)
  */
 const createGrid = (gridSize) => {
     for (let i = 0; i < gridSize * gridSize; i++) {
@@ -33,7 +33,7 @@ createGrid();
 /**
  * Darkens a given color by a specified intensity.
  * @param {number[]} color - The RGB color to darken. For gray, use [128, 128, 128]
- * @param {number} intensity - The percentage by which to darken the color (0-100)
+ * @param {number - integer} intensity - The percentage by which to darken the color (0-100)
  * @returns {string} - The darkened color
  */
 const darkenColor = (color, intensity) => {
