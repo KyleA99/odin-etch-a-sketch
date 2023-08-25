@@ -1,4 +1,4 @@
-const gridSize = "";
+// const gridSize = "";
 const gridContainer = document.querySelector("#grid-container");
 
 /**
@@ -61,11 +61,10 @@ const promptGridSize = () => {
     const gridValue = prompt("Please specify the desired grid size. E.g. 64 specifies a 64x64 grid.");
     const gridSize = parseInt(gridValue);
 
-    try {
-        if (gridSize > 100) throw new Error("exceeds maximum grid size of 100x100");
-            createGrid(gridSize);
-    } catch(err) {
-        alert("Specified grid size " + err);
+    if (gridSize > 100) {
+        alert("Exceeds maximum grid size of 100x100");
+    } else {
+        createGrid(gridSize);
     }
 };
 promptButton.addEventListener("click", promptGridSize);
