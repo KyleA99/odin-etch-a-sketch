@@ -1,6 +1,4 @@
-// const gridSize = "";
 const gridContainer = document.querySelector("#grid-container");
-
 /**
  * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
  * @param {number - integer} gridSize - The size of the grid (number of rows and columns)
@@ -55,7 +53,6 @@ const promptButton = document.getElementById("prompt-button");
  * Prompts the user to specify the desired grid size and creates the grid accordingly.
  */
 const promptGridSize = () => {
-    // Clear the existing grid if a new prompt() result is inputted by user
     clearGrid();
 
     const gridValue = prompt("Please specify the desired grid size. E.g. 64 specifies a 64x64 grid.");
