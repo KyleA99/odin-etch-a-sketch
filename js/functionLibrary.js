@@ -16,6 +16,10 @@ export const promptGridSize = (gridContainer) => {
     }
 };
 
+/**
+ * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
+ * @param {number - integer} gridSize - The size of the grid (number of rows and columns)
+ */
 export const createGrid = (gridContainer, gridSize) => {
     clearGrid(gridContainer); // Clear the grid container
 
@@ -37,6 +41,9 @@ export const createGrid = (gridContainer, gridSize) => {
     }
 };
 
+/**
+ * Clears the grid container by removing all child elements
+ */
 export const clearGrid = (gridContainer) => {
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
@@ -63,13 +70,4 @@ const darkenColor = (color, intensity) => {
     const [r, g, b] = calculateDarkenedColor(color, intensity);
     const darkenedColor = `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
     return darkenedColor;
-};
-
-/**
- * Clears the grid container by removing all child elements
- */
-export const clearGrid = () => {
-    while (gridContainer.firstChild) {
-        gridContainer.removeChild(gridContainer.firstChild);
-    }
 };
