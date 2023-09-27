@@ -1,9 +1,8 @@
-const promptButton = document.getElementById("prompt-button");
 /**
  * Prompts the user to specify the desired grid size and creates the grid accordingly.
  */
-const promptGridSize = () => {
-    clearGrid();
+export const promptGridSize = (gridContainer) => {
+    clearGrid(gridContainer);
 
     const gridValue = prompt("Please specify the desired grid size. E.g. 64 specifies a 64x64 grid.");
     const gridSize = parseInt(gridValue);
@@ -13,38 +12,36 @@ const promptGridSize = () => {
     } else if (gridSize > 100) {
         alert("Exceeds maximum grid size of 100x100");
     } else {
-        createGrid(gridSize);
+        createGrid(gridContainer, gridSize); // Pass gridSize as an argument
     }
 };
-promptButton.addEventListener("click", promptGridSize);
 
-const gridContainer = document.querySelector("#grid-container");
-/**
- * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
- * @param {number - integer} gridSize - The size of the grid (number of rows and columns)
- */
-const createGrid = (gridSize) => {
+export const createGrid = (gridContainer, gridSize) => {
+    clearGrid(gridContainer); // Clear the grid container
+
     for (let i = 0; i < gridSize * gridSize; i++) {
         const gridTile = document.createElement("div");
         gridTile.classList.add("gridTileContent");
-        // Set the height and width of the gridTile divs
         gridTile.style.height = `${100 / gridSize}%`;
         gridTile.style.width = `${100 / gridSize}%`;
 
         let colorIntensity = 0;
 
-        // An event listener is attached to gridTile that changes gridTile to be gray when the mouse enters each gridTile
         gridTile.addEventListener("mouseenter", (event) => {
             colorIntensity += 10;
-            // Calls the result of darkenColor() and assigns the darkened RGB color of gray to a variable
             const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
             event.target.style.backgroundColor = darkenedColor;
         });
-      
+
         gridContainer.appendChild(gridTile);
     }
 };
-createGrid();
+
+export const clearGrid = (gridContainer) => {
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+};
 
 /**
  * Calculates a darkened version of the given RGB color based on the specified intensity.
@@ -68,13 +65,11 @@ const darkenColor = (color, intensity) => {
     return darkenedColor;
 };
 
-const clearButton = document.getElementById("clear-button");
 /**
  * Clears the grid container by removing all child elements
  */
-const clearGrid = () => {
+export const clearGrid = () => {
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
 };
-clearButton.addEventListener("click", clearGrid);
