@@ -1,4 +1,5 @@
-import { promptGridSize, clearGrid } from "./functionLibrary.js";
+import { promptGridSize } from "./promptGridSize.js";
+import { clearGrid } from "./clearGrid.js";
 
 const promptButton = document.getElementById("prompt-button");
 const gridContainer = document.querySelector("#grid-container");
