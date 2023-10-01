@@ -55,7 +55,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border: solid 2px black;
     border-radius: 2rem;
     padding: 0.5rem;
-    margin: 1rem auto;
+    margin: 0.25rem auto;
     width: 45%;
 }
 
@@ -155,6 +155,12 @@ footer, .footer-container {
 .github-logo {
     height: 1.5rem;
     width: 1.5rem;
+}
+
+@media (height <= 750px) {
+    footer, .footer-container {
+        position: relative;
+    }
 }
 
 @media (360px <= width <= 1200px) {
