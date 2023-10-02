@@ -20,8 +20,8 @@
 <body>
     <main>
         <div class="content-container">
-            <div class="instructions-shell">
-                <div class="instructions-container box-shadow">
+            <section class="instructions-shell">
+                <div class="instructions-container box-shadow" role="list">
                     <h3 class="instructions-header">Instructions</h3>
                     <ol>
                         <li>Click the "Select grid size" button and specify the desired grid size.</li>
@@ -29,23 +29,23 @@
                         <li>The "Clear screen" button can be used to reset the screen.</li>
                     </ol>
                 </div>
-            </div>
+            </section>
 
-            <div class="etch-container box-shadow">
+            <section class="etch-container  box-shadow">
                 <h1 class="etch-title">Etch A Sketch</h1>
 
                 <div id="grid-container"></div>
 
                 <div class="buttons-container">
-                    <button id="prompt-button" type="button">Select grid size</button>
-                    <button id="clear-button" type="button">Clear screen</button>
+                    <button id="prompt-button" role="button" type="button" aria-label="Select grid size">Select grid size</button>
+                    <button id="clear-button" role="button" type="button" aria-label="Clear screen">Clear screen</button>
                 </div>
 
                 <div class="knobs-container">
                     <div class="knob-left"></div>
                     <div class="knob-right"></div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
@@ -53,7 +53,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div id="footer-text">Copyright &copy Kyle Angelich 2023</div>
-                <a href="https://github.com/KyleA99/odin-etch-a-sketch" target="_blank"><img class="github-logo" src="assets/images/github-mark.png" alt="an image of the github logo, colored purple"></a>
+                <a href="https://github.com/KyleA99/odin-etch-a-sketch" target="_blank"><img class="github-logo" src="assets/images/github-mark.png" alt="GitHub logo">
+                </a>
             </div>
         </div>
     </footer>
