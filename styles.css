@@ -14,6 +14,10 @@
     margin: 0;
 }
 
+html body {
+    height: 100%;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -87,7 +91,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-wrap: wrap;
     border: solid 3px var(--clr-primary);
-    height: 25rem;
+    height: 50vh;
     width: 80%;
     margin: 0 auto;
     border-radius: 1rem;
@@ -157,24 +161,62 @@ footer, .footer-container {
     width: 1.5rem;
 }
 
-@media (height <= 750px) {
+@media screen and (max-height: 750px) {
     footer, .footer-container {
         position: relative;
     }
 }
 
-@media (360px <= width <= 1200px) {
+@media (min-width: 360px) and (max-width: 1200px) {
     .etch-container, .instructions-container {
         width: 80%;
     }
-}
 
-@media (width <= 900px) {
-    .instructions-container {
-        width: 95%;
+    html {
+        width: 100%;
     }
 
+    .etch-container {
+        min-width: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .buttons-container {
         padding: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #prompt-button, #clear-button {
+        padding: 0.5rem;
+    }
+
+    .knob-left, .knob-right {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-top: -3.5rem;
+    }
+    
+    .knob-left {
+        left: 1rem;
+    }
+    
+    .knob-right {
+        right: 1rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    #prompt-button, #clear-button {
+        margin: 0.5rem;
+    }
+
+    .knob-left, .knob-right {
+        margin-top: -4.5rem;
     }
 }
