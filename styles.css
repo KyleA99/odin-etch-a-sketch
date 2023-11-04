@@ -167,7 +167,7 @@ footer, .footer-container {
     }
 }
 
-@media (min-width: 360px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .etch-container, .instructions-container {
         width: 80%;
     }
