@@ -192,6 +192,10 @@ footer, .footer-container {
 }
 
 @media screen and (max-width: 650px) {
+    #grid-container {
+        height: 40vh;
+    }
+    
     #prompt-button, #clear-button {
         padding: 0.5rem;
     }
