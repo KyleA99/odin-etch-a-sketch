@@ -2,7 +2,8 @@ import { clearGrid } from "./clearGrid.js";
 import { darkenColor } from "./darkenColor.js";
 
 /**
- * Creates a grid of div elements in the specified container, with each cell changing color when hovered over.
+ * Creates a grid of div elements in the specified container, with each cell changing color when hovered over or touched on mobile devices.
+ * @param {HTMLElement} gridContainer - The container where the grid will be created.
  * @param {number} gridSize - The size of the grid (number of rows and columns).
  */
 export const createGrid = (gridContainer, gridSize) => {
