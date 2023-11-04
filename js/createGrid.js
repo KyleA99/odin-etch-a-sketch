@@ -17,10 +17,19 @@ export const createGrid = (gridContainer, gridSize) => {
 
         let colorIntensity = 0;
 
-        gridTile.addEventListener("mouseenter", (event) => {
+        // Add "mouseenter" event listener for desktop
+        gridTile.addEventListener("mouseenter", () => {
             colorIntensity += 10;
             const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
-            event.target.style.backgroundColor = darkenedColor;
+            gridTile.style.backgroundColor = darkenedColor;
+        });
+
+        // Add "touchstart" event listener for mobile/tablet (No mouse to enter grid)
+        gridTile.addEventListener("touchstart", (event) => {
+            event.preventDefault();
+            colorIntensity += 10;
+            const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
+            gridTile.style.backgroundColor = darkenedColor;
         });
 
         gridContainer.appendChild(gridTile);
