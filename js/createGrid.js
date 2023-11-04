@@ -24,14 +24,6 @@ export const createGrid = (gridContainer, gridSize) => {
             gridTile.style.backgroundColor = darkenedColor;
         });
 
-        // Add "touchstart" event listener for mobile/tablet (No mouse to enter grid)
-        gridTile.addEventListener("touchstart", (event) => {
-            event.preventDefault();
-            colorIntensity += 10;
-            const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
-            gridTile.style.backgroundColor = darkenedColor;
-        });
-
         gridContainer.appendChild(gridTile);
     }
 };
