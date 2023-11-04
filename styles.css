@@ -212,6 +212,14 @@ footer, .footer-container {
 }
 
 @media screen and (max-width: 460px) {
+    .instructions-container ol, button {
+        font-size: 12px;
+    }
+
+    .instructions-container ol {
+        padding-left: 1rem;
+    }
+
     .buttons-container {
         flex-direction: column;
     }
