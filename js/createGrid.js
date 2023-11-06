@@ -24,6 +24,19 @@ export const createGrid = (gridContainer, gridSize) => {
             gridTile.style.backgroundColor = darkenedColor;
         });
 
+        // Add "touchmove" event listener for tablet/mobile
+        gridContainer.addEventListener("touchmove", (event) => {
+            event.preventDefault();
+            const touch = event.touches[0];
+            const targetTile = document.elementFromPoint(touch.clientX, touch.clientY);
+            
+            if (targetTile === gridTile) {
+                colorIntensity += 10;
+                const darkenedColor = darkenColor([128, 128, 128], colorIntensity);
+                targetTile.style.backgroundColor = darkenedColor;
+            }
+        });
+
         gridContainer.appendChild(gridTile);
     }
 };
